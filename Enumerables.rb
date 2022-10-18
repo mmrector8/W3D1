@@ -80,14 +80,14 @@ class Array
         #define a return array
         rotated = Array.new(self.length)
         #loop through array
-            self.each_with_index do |ele, i|
+            self.each_with_index do |ele, i| #self[0] = "a"
             #get current index
-                idx = i
-                new_idx = (i - rotations) % self.length
+                new_idx = (i - rotations) % self.length #0 -1 
                 rotated[new_idx] = ele
             end
         rotated
     end
+
 
     def my_join(sep = "")
         self.join(sep)
